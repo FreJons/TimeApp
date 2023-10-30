@@ -40,6 +40,3 @@ This Android application demonstrates how to synchronize the device's time with 
 This project is licensed under the [MIT License](LICENSE). Feel free to use, modify, and distribute the code for your purposes.
 
 ---
-
-**Note:** This readme provides a general overview of the code and its functionality. Please refer to the source code comments and implementation details for a comprehensive understanding.# TimeApp
-Android app that shows system time or ntp time.
