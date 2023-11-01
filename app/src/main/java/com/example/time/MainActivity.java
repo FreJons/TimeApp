@@ -33,6 +33,7 @@ import java.net.InetAddress;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
+import java.util.TimeZone;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -85,6 +86,7 @@ public class MainActivity extends AppCompatActivity {
         long NTPTime = timeInfo.getMessage().getTransmitTimeStamp().getTime();
         Date ntpDate = new Date(NTPTime);
         System.out.println("Returning NTPtime");
+        timeFormat.setTimeZone(TimeZone.getTimeZone("Europe/Stockholm"));
         return ntpDate;
 
     }
@@ -112,7 +114,7 @@ public class MainActivity extends AppCompatActivity {
                 }
             }).start();
         } else {
-
+            timeFormat.setTimeZone(TimeZone.getDefault());
             String formattedTime = timeFormat.format(new Date());
             textclockid.setText(formattedTime);
             textview.setText("System Time: ");
